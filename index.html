@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Тестовое задание</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1'/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+</head>
+<body>
+    <div class="pagination">
+        <div class="pagination__elipse pagination__elipse_active" onclick='moveTo(0)'></div>
+        <div class="pagination__elipse" onclick='moveTo(1)'></div>
+        <div class="pagination__elipse" onclick='moveTo(2)'></div>
+    </div>
+    <div class="box box-1">
+        <p class="header">Всегда ли цели терапии СД2 <br/>на поверхности?</p>
+        <p class="box-1__txt box-1__txt_txt-1">Цель по HbA1c</p>
+        <p class="box-1__txt box-1__txt_txt-2">Осложнения СД</p>
+        <p class="box-1__txt box-1__txt_txt-3">СС риски</p>
+        <p class="box-1__txt box-1__txt_txt-4">Гипогликемия</p>
+        <div class="circles circlesFirst">
+            <div class="circles__elipse circlesFirst__elipseFirst"></div>
+            <div class="circles__elipse circlesFirst__elipseSecond"></div>
+            <div class="circles__elipse circlesFirst__elipseThird"></div>
+        </div>
+        <div class="circles circlesSecond">
+            <div class="circles__elipse circlesSecond__elipseFirst"></div>
+            <div class="circles__elipse circlesSecond__elipseSecond"></div>
+            <div class="circles__elipse circlesSecond__elipseThird"></div>
+        </div>
+        <div class="circles circlesThird">
+            <div class="circles__elipse circlesThird__elipseFirst"></div>
+            <div class="circles__elipse circlesThird__elipseSecond"></div>
+            <div class="circles__elipse circlesThird__elipseThird"></div>
+        </div>
+        <div class="circles circlesFourth">
+            <div class="circles__elipse circlesFourth__elipseFirst"></div>
+            <div class="circles__elipse circlesFourth__elipseSecond"></div>
+            <div class="circles__elipse circlesFourth__elipseThird"></div>
+        </div>
+        <div class="next-slide" onclick='moveTo(1)'>
+            <p>Листайте вниз</p>
+            <div class="shape"></div>
+            <div class="rectangle"></div>
+            <div class="ellipse"></div>
+        </div>
+    </div>
+    <div class="box box-2">
+        <p class="header">Основа терапии - <br />патогенез СД2</p>
+        <img class="box-2__ice box-2__ice_elem-1" src="./img/BG_2/ice-1.png"/>
+        <img class="box-2__ice box-2__ice_elem-2" src="./img/BG_2/ice-2.png"/>
+        <img class="box-2__ice box-2__ice_elem-3" src="./img/BG_2/ice-3.png"/>
+        <img class="box-2__ice box-2__ice_elem-4" src="./img/BG_2/ice-4.png"/>
+    </div>
+    <div class="box box-3">
+        <div class="longcontainer">
+            <div class="longcontainer__slide longcontainer__slide_left slideLeft">
+                <img class="slideLeft__ice slideLeft__ice_elem-1" src="./img/BG_3/ice-1.png"/>
+                <img class="slideLeft__ice slideLeft__ice_elem-2" src="./img/BG_3/ice-2.png"/>
+                <img class="slideLeft__ice slideLeft__ice_elem-3" src="./img/BG_3/ice-3.png"/>
+                <p class="header">Звенья патогенеза СД2</p>
+                <div class="content">
+                    <p class="block">Гипергликемия</p>
+                    <img class="content__arrow content__arrow_left" src="./img/BG_3/ArrowLeft.png"/>
+                    <img class="content__arrow content__arrow_right" src="./img/BG_3/ArrowRight.png"/>
+                    <img class="content__arrow content__arrow_down" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_rightDown" src="./img/BG_3/ArrowRight-Down.png"/>
+                    <img class="content__arrow content__arrow_leftDown" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <span class="content__icon content__icon_center">&beta;</span>
+                    <span class="content__icon content__icon_left"></span>
+                    <span class="content__icon content__icon_right"></span>
+                    <p class="content__txt content__txt_first"> 1 <br /> &beta;-клетки </p>
+                    <p class="content__txt content__txt_second"> 2 <br /> Мышцы </p>
+                    <p class="content__txt content__txt_third"> 3 <br /> Печень </p>
+                </div>
+            </div>
+            <div class="longcontainer__slide longcontainer__slide_center slideCenter">
+                <img class="slideCenter__ice slideCenter__ice_elem-1" src="./img/BG_3/ice-1.png"/>
+                <img class="slideCenter__ice slideCenter__ice_elem-2" src="./img/BG_3/ice-2.png"/>
+                <img class="slideCenter__ice slideCenter__ice_elem-3" src="./img/BG_3/ice-3.png"/>
+                <p class="header">Смертельный октет</p>
+                <div class="content">
+                        <p class="block">Гипергликемия</p>
+                        <span class="content__icon content__icon_1">&beta;</span>
+                        <span class="content__icon content__icon_2">2</span>
+                        <span class="content__icon content__icon_3">3</span>
+                        <span class="content__icon content__icon_4"></span>
+                        <span class="content__icon content__icon_5"></span>
+                        <span class="content__icon content__icon_6"></span>
+                        <span class="content__icon content__icon_7"></span>
+                        <span class="content__icon content__icon_8"></span>
+                        <img class="content__arrow content__arrow_left" src="./img/BG_3/ArrowLeft.png"/>
+                        <img class="content__arrow content__arrow_right" src="./img/BG_3/ArrowRight.png"/>
+                        <img class="content__arrow_down content__arrow_down-1" src="./img/BG_3/ArrowDown.png"/>
+                        <img class="content__arrow_down content__arrow_down-2" src="./img/BG_3/ArrowDown.png"/>
+                        <img class="content__arrow_down content__arrow_down-3" src="./img/BG_3/ArrowDown.png"/>
+                        <img class="content__arrow_up content__arrow_up-1" src="./img/BG_3/ArrowDown.png"/>
+                        <img class="content__arrow_up content__arrow_up-2" src="./img/BG_3/ArrowDown.png"/>
+                        <img class="content__arrow_up content__arrow_up-3" src="./img/BG_3/ArrowDown.png"/>
+                        <p class="content__txt content__txt_txt-1"> 1 <br /> &beta;-клетки </p>
+                        <p class="content__txt content__txt_txt-2"> Инкретиновый<br /> эффект </p>
+                        <p class="content__txt content__txt_txt-3"> Дефект<br /> &alpha;-клеток </p>
+                        <p class="content__txt content__txt_txt-4"> 4 <br /> Жировые<br/> клетки </p>
+                        <p class="content__txt content__txt_txt-5"> 5 <br /> Мышцы </p>
+                        <p class="content__txt content__txt_txt-6"> 6 <br /> Печень </p>
+                        <p class="content__txt content__txt_txt-7"> 7 <br />Головной <br />мозг </p>
+                        <p class="content__txt content__txt_txt-8"> 8 <br /> Почки </p>
+                </div>
+            </div>
+            <div class="longcontainer__slide longcontainer__slide_right slideRight">
+                <img class="slideRight__ice slideRight__ice_elem-1" src="./img/BG_3/ice-1.png"/>
+                <img class="slideRight__ice slideRight__ice_elem-2" src="./img/BG_3/ice-2.png"/>
+                <img class="slideRight__ice slideRight__ice_elem-3" src="./img/BG_3/ice-3.png"/>
+                <p class="header">Звенья патогенеза СД2</p>
+                <div class="content">
+                    <span class="content__icon content__icon_1">&beta;</span>
+                    <span class="content__icon content__icon_4"></span>
+                    <span class="content__icon content__icon_5"></span>
+                    <span class="content__icon content__icon_6"></span>
+                    <span class="content__icon content__icon_7"></span>
+                    <span class="content__icon content__icon_8"></span>
+                    <span class="content__icon content__icon_9"></span>
+                    <span class="content__icon content__icon_10"></span>
+                    <span class="content__icon content__icon_11"></span>
+                    <img class="content__arrow content__arrow_down-1" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <img class="content__arrow content__arrow_down-2" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-3" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-4" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-5" src="./img/BG_3/ArrowUp.png"/>
+                    <img class="content__arrow content__arrow_down-6" src="./img/BG_3/ArrowUp.png"/>
+                    <img class="content__arrow content__arrow_down-7" src="./img/BG_3/ArrowUp.png"/>
+                    <img class="content__arrow content__arrow_down-8" src="./img/BG_3/ArrowUp.png"/>
+                    <img class="content__arrow content__arrow_down-9" src="./img/BG_3/ArrowUp.png"/>
+                    <img class="content__arrow content__arrow_down-10" src="./img/BG_3/ArrowRight.png"/>
+                    <img class="content__arrow content__arrow_down-11" src="./img/BG_3/ArrowRight.png"/>
+                    <img class="content__arrow content__arrow_down-12" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-13" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-14" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <img class="content__arrow content__arrow_down-15" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <img class="content__arrow content__arrow_down-16" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <img class="content__arrow content__arrow_down-17" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-18" src="./img/BG_3/ArrowDown.png"/>
+                    <img class="content__arrow content__arrow_down-19" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <img class="content__arrow content__arrow_down-20" src="./img/BG_3/ArrowLeft-Down.png"/>
+                    <img class="content__arrow content__arrow_down-21" src="./img/BG_3/ArrowUp.png"/>
+                    <img class="content__arrow content__arrow_down-22" src="./img/BG_3/ArrowUp.png"/>
+                    <div class="content__txt content__txt_text-1">1 <p>&beta;-клетки</p></div>
+                    <p class="content__txt content__txt_small-medium content__txt_text-2">2<br/>&darr; инкретинового эффекта</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-3">3<br/>Дефект &alpha;-клеток</p>
+                    <p class="content__txt content__txt_medium content__txt_text-4">Гипергликемия</p>
+                    <p class="content__txt content__txt_small content__txt_text-5">&darr; амилин</p>
+                    <p class="content__txt content__txt_small content__txt_text-6">&uarr; глюкагон</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-7">4<br/>Жировые клетки</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-8">5<br/>Мышцы</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-9">6<br/>Печень</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-10">7<br/>Головной мозг</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-11">8<br/>Микрофлора кишечника</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-12">9<br/>Нарушение имунной <br/>регуяции/воспаление</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-13">10<br/>Желудок</p>
+                    <p class="content__txt content__txt_small-medium content__txt_text-14">11<br/>Почки</p>
+                    <div class="content__box">
+                        <p class="nameBox">Инсулирезистентность</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div class="elems">
+                <div class="elems__linear"></div>
+                <div class="elems__linear elems__linear_color"></div>
+                <div class="elems__polygon"></div>
+            </div>
+            <div class="years">
+                <p>1988</p>
+                <p>2009</p>
+                <p>2016</p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

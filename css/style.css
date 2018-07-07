@@ -1,0 +1,1151 @@
+@font-face {
+    font-family: GothamProLig ;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/GothaProLig.otf);
+}
+@font-face {
+    font-family: GothamProReg ;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/GothaProReg.otf);
+}
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Lato-Medium.ttf);
+}
+
+html, body{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body{ 
+    height: 768px;
+    width: 1024px;
+    margin: 0;
+    background: #2b3fa9;
+    overflow: hidden; /* Отменим пролистывание */
+}
+
+/* Стили для навигации слайдера */
+.pagination{
+    width: 13px;
+    position: fixed;
+    right: 27px;
+    top: 353px;
+    z-index: 99;  
+}
+.pagination__elipse{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    margin-bottom: 7px;
+    z-index: 99;
+  }
+  .pagination__elipse:last-of-type{
+      margin-bottom: 0;
+  }
+
+.pagination__elipse_active{
+    background-color: rgb(247, 139, 31);      
+}
+/* конец стилей для навигации слайдера */
+
+
+.box{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;  
+}
+.box-1{
+    background-image: url(../img/BG_1/more_copy.jpg);
+    background-size: 1052px 768px;
+    background-position-x: -22px;
+    transition: margin .5s ease-out;
+}
+.box-2{
+    background-image: url(../img/BG_2/more_copy2.jpg);
+}
+
+/* Стили для стрелки-подсказки для первого слайда */
+.box-1 .next-slide{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.box-1 .next-slide p{
+    font-size: 14px;
+    font-family: GothamProLig;
+    color: rgb(255, 255, 255);
+    line-height: 1.2em;
+    z-index: 1;
+}
+.box-1 .next-slide .shape{
+    width: 39px;
+    height: 17px;
+    margin: 0 auto 26px;
+    background-image: url(../img/next/Shape.png); 
+    background-size: 39px 17px;
+    z-index: 1;
+}
+.box-1 .next-slide .rectangle{
+    width: 100%;
+    height: 40px;
+    background: radial-gradient(ellipse farthest-corner at 50% 150%, rgb(247, 139, 31) 50%, rgba(247, 139, 31, 0.02) 70% );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.box-1 .next-slide .ellipse{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    background: radial-gradient(ellipse farthest-corner at 50% 100%, rgb(247, 139, 31) 10%, rgba(247, 139, 31, 0.5) 34%, rgba(247, 139, 31, 0) 50% );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+/*конец стилей для стрелки-подсказки первого слайда */
+
+/*Заголовки слайдов*/
+.box .header{
+    font-size: 48px;
+    line-height: 1.2;
+    position: absolute;
+    z-index: 15; 
+}
+.box-1 .header {
+    font-family: GothamProReg;
+    color: rgb(13, 49, 156);
+    text-align: left;
+    top: 60px;
+    left: 80px;
+}
+
+.box-2 .header{
+    font-family: GothamProLig;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 180px;
+}
+/*конец заголовков слайдов*/
+
+/*Пульсирующие круги на первом слайде*/
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: nowrap;
+}
+.circles__elipse{
+    border: 2px solid rgb(207,20,55);
+    border-radius: 50%;
+    background: radial-gradient( circle closest-side at 50% 50%, rgba(222,121,27, 0.9) 1%, rgba(207,20,55, 0.4) 100%);
+    position: absolute;
+    opacity: 0.5;
+    z-index: 14;
+}
+
+    /*Первая группа пульсирующих кругов*/ 
+    .circlesFirst{
+        top: 288px;
+        right: 442px;
+    }
+    .circlesFirst__elipseFirst,
+    .circlesFirst__elipseSecond{
+        animation: pulsatingCirclesFirst 1.6s linear infinite;
+    }
+    @keyframes pulsatingCirclesFirst{
+        from {
+            width: 1px;
+            height: 1px; 
+        }
+        to { 
+            width: 52px;
+            height: 52px; 
+        }  
+    }
+    .circlesFirst__elipseThird{
+        width: 52px;
+        height: 52px; 
+    }
+    .circlesFirst__elipseSecond,
+    .circlesSecond__elipseSecond{
+        animation-delay: 0.8s;
+    }
+
+    /*Вторая группа пульсирующих кругов*/
+    .circlesSecond{
+        bottom: 242px;
+        right: 194px;
+    }
+    .circlesSecond__elipseThird{
+        width: 16px;
+        height: 16px; 
+    }
+    .circlesSecond__elipseFirst,
+    .circlesSecond__elipseSecond{
+        animation: pulsatingCirclesSecond 0.8s linear infinite;
+    }
+    @keyframes pulsatingCirclesSecond{
+        from {
+            width: 1px;
+            height: 1px; 
+        }
+        to { 
+            width: 16px;
+            height: 16px; 
+        }  
+    }
+
+    /*Третья группа пульсирующих кругов*/
+    .circlesThird{
+        bottom: 224px;
+        right: 544px;
+    }
+    .circlesThird__elipseThird{
+        width: 16px;
+        height: 16px; 
+    }
+    .circlesThird__elipseFirst,
+    .circlesThird__elipseSecond{
+        animation: pulsatingCirclesThird 0.8s linear infinite;
+    }
+    @keyframes pulsatingCirclesThird{
+        from {
+            width: 1px;
+            height: 1px; 
+        }
+        to { 
+            width: 16px;
+            height: 16px; 
+        }  
+    }
+
+    /*Четвертая группа пульсирующих кругов*/
+    .circlesFourth{
+        bottom: 326px;
+        left: 274px;
+    }
+    .circlesFourth__elipseThird{
+        width: 26px;
+        height: 26px; 
+    }
+    .circlesFourth__elipseFirst,
+    .circlesFourth__elipseSecond{
+        animation: pulsatingCirclesFourth 0.8s linear infinite;
+    }
+    @keyframes pulsatingCirclesFourth{
+        from {
+            width: 1px;
+            height: 1px; 
+        }
+        to { 
+            width: 26px;
+            height: 26px; 
+        }  
+    }
+/*конец стилей для пульсирующих кругов*/
+
+/* Стили для текста рядом с пульсирующими кругами */
+.box-1__txt{
+    font-size: 18px;
+    font-family: Lato;
+    color: rgb(13, 49, 156);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    z-index: 34;
+}
+
+.box-1__txt_txt-1{
+    left: 630px;
+    top: 254px;
+}
+.box-1__txt_txt-2{
+    left: 394px;
+    bottom: 222px;
+}
+.box-1__txt_txt-3{
+    right: 150px;
+    bottom: 240px;
+}
+.box-1__txt_txt-4{
+    left: 226px;
+    bottom: 330px;
+}
+/* Конец стилей для текста рядом с пульсирующими кругами*/
+
+
+/*Второй слайд*/
+.box-2__ice {
+    position: absolute;
+    z-index: 1;
+}  
+.box-2__ice_elem-1{
+    height: 200px;
+    right: 0;
+    top: 38px;
+}
+.box-2__ice_elem-2{
+    height: 100px;
+    left: 240px;
+    bottom: 220px;
+}
+.box-2__ice_elem-3{
+    height: 50px;
+    left: 70px;
+    top: 160px;
+}
+.box-2__ice_elem-4{
+    height: 80px;
+    right: 220px;
+    bottom: 100px;
+}
+/*конец второго слайда*/
+  
+/*Стили для третьего слайда*/
+
+.box-3{
+    overflow: hidden;
+}
+
+.longcontainer{
+    display: inline-flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    margin: 0;
+    width: 3072px;
+}
+.longcontainer__slide{
+    display: inline-block;
+    width: 1024px;
+    height: 100%;
+    background: url(../img/BG_3/more_copy3.jpg); 
+    background-size: cover;
+    position: relative;
+}
+.longcontainer__slide .header{
+    font-size: 30px;
+    font-family: GothamProLig;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 100px;
+    top: 60px;
+}
+
+.longcontainer__slide .content{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+.longcontainer__slide .content .block{
+    width: 240px;
+    font-size: 20px;
+    font-family: Lato;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    line-height: 4;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 120px);
+    top: 50%;
+    z-index: 218;
+}
+
+/*Стили для первой страницы карусели*/
+        .longcontainer__slide_left{
+            margin-left: -1024px;
+            transition: margin .5s ease-in;
+        }
+        .slideLeft__ice{
+            position: absolute;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .slideLeft__ice_elem-1{
+            height: 100px;
+            right: 220px;
+            top: 200px;
+        }
+        .slideLeft__ice_elem-2{
+            height: 40px;
+            right: 80px;
+            top: 80px;
+        }
+        .slideLeft__ice_elem-3{
+            height: 180px;
+            left: 30px;
+            bottom: 70px;
+        }
+        
+        /*Стрелки*/
+        .longcontainer__slide_left .content__arrow_left,
+        .longcontainer__slide_center .content__arrow_left{
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            right: 310px;
+            top: 444px;
+        }
+        .longcontainer__slide_left .content__arrow_right,
+        .longcontainer__slide_center .content__arrow_right{
+            position: absolute;
+            height: 6px;
+            width: 70px;
+            left: 310px;
+            top: 444px;
+        }
+        .longcontainer__slide_left .content__arrow_leftDown{
+            position: absolute;
+            width: 160px;
+            height: 130px;
+            left: 310px;
+            top: 290px;
+        }
+        .longcontainer__slide_left .content__arrow_rightDown{
+            position: absolute;
+            width: 160px;
+            height: 130px;
+            right: 310px;
+            top: 290px;
+        }
+        .longcontainer__slide_left .content__arrow_down{
+            position: absolute;
+            height: 70px;
+            width: 6px;
+            left: calc(50% - 3px);
+            top: 320px;
+        }
+        /*конец стилей для стрелок*/
+
+        /*Иконки*/
+        .content__icon{
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+        .longcontainer__slide_left .content__icon{
+            width: 80px;
+            height: 80px;
+        }
+        .content__icon_center{
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-family: Lato;
+            line-height: 1.4;
+            top: 230px;
+            left: calc(50% - 40px);
+            text-align: center;
+        }
+        .content__icon_left{
+            background-image: url(../img/BG_3/muscle.png);
+            top: 405px;
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            left: calc(50% - 290px);
+            text-align: center;
+        }
+        .content__icon_right{
+            background-image: url(../img/BG_3/liver.png);
+            top: 405px;
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            right: calc(50% - 290px);
+            text-align: center;
+        }
+        /*конец стилей для иконок*/
+
+        /*Заголовки иконок*/
+        .content__txt{
+            width: 200px;
+            margin: 0;
+            font-family: GothamProLig;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+        }
+        .longcontainer__slide_left .content__txt::first-letter{
+            font-size: 32px;
+            font-family: Lato;
+            line-height: 1.2;
+        }
+        .content__txt_first{
+            left: calc(50% - 100px);
+            top: 150px;
+        }
+        .content__txt_second{
+            left: 160px;
+            top: 330px;
+        }  
+        .content__txt_third{
+            right: 160px;
+            top: 330px;
+        } 
+        /*конец стилей для заголовков иконок*/                 
+
+/*конец стилей для первой страницы карусели*/
+
+/*Стили для второй страницы карусели*/
+    .longcontainer__slide_center{
+        
+    }
+    .slideCenter__ice{
+        position: absolute;
+        z-index: 1;
+        opacity: 0.5;
+    }
+    .slideCenter__ice_elem-1{
+        height: 100px;
+        left: 60px;
+        top: 250px;
+    }
+    .slideCenter__ice_elem-2{
+        height: 40px;
+        right: 500px;
+        top: 80px;
+    }
+    .slideCenter__ice_elem-3{
+        height: 180px;
+        right: 0;
+        bottom: 0;
+        opacity: 0.3;
+    }
+
+    .longcontainer__slide_center .content .block{
+        position: absolute;
+        left: calc(50% - 170px);
+        top: calc(50% - 77px);
+        z-index: 184;
+        width: 340px;
+        line-height: 5.6;
+        font-size: 22px;
+        font-family: GothamProLig;
+    }
+
+        /*Иконки*/
+        .content__icon{
+            width: 56px;
+            height: 56px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Lato;
+        }
+        .content__icon_1{
+            top: 230px;
+            left: calc(50% - 28px);
+            font-size: 58px;
+            line-height: 1;
+        }
+        .longcontainer__slide_center .content__icon_2{
+            top: 230px;
+            left: calc(50% - 168px);
+            font-size: 36px;
+            line-height: 1.5;
+        }
+        .longcontainer__slide_center .content__icon_3{
+            top: 230px;
+            right: calc(50% - 168px);
+            font-size: 36px;
+            line-height: 1.5;
+        }
+        .longcontainer__slide_center .content__icon_4{
+            top: calc(50% - 28px);
+            right: 230px;
+            background-image: url(../img/BG_3/lipid.png);
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .longcontainer__slide_center .content__icon_5{
+            bottom: 218px;
+            right: calc(50% - 168px);
+            background-image: url(../img/BG_3/muscle.png);
+            background-size: 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .longcontainer__slide_center .content__icon_6{
+            bottom: 218px;
+            left: calc(50% - 28px);
+            background-image: url(../img/BG_3/liver.png);
+            background-size: 80%;
+            background-position: 4px 10px;
+            background-repeat: no-repeat;
+        }
+        .longcontainer__slide_center .content__icon_7{
+            bottom: 218px;
+            left: calc(50% - 168px);
+            background-image: url(../img/BG_3/brain.png);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .longcontainer__slide_center .content__icon_8{
+            top: calc(50% - 28px);
+            left: 230px;
+            background-image: url(../img/BG_3/reins.png);
+            background-size: 70%;
+            background-position: 5px 4px;
+            background-repeat: no-repeat;
+        }
+        /*конец стилей для иконок второй страницы карусели*/
+
+        /*Текст рядом с иконками*/
+        .longcontainer__slide_center .content__txt{
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        .content__txt_txt-1{
+            right: calc(50% - 100px);
+            top: 160px;
+            text-align: center;
+        }
+        .content__txt_txt-2{
+            left: 130px;
+            top: 234px;
+            text-align: right;
+        }
+        .content__txt_txt-3{
+            right: 130px;
+            top: 234px;
+            text-align: left;
+        }
+        .content__txt_txt-4{
+            right: 20px;
+            top: 360px;
+            text-align: left;
+        }
+        .content__txt_txt-5{
+            right: 270px;
+            bottom: 156px;
+            text-align: center;
+        }
+        .content__txt_txt-6{
+            right: calc(50% - 100px);
+            bottom: 156px;
+            text-align: center;
+        }
+        .content__txt_txt-7{
+            left: 272px;
+            bottom: 135px;
+            text-align: center;
+        }
+        .content__txt_txt-8{
+            left: 20px;
+            top: 360px;
+            text-align: right;
+        }
+        
+        .longcontainer__slide_center .content__txt:first-line{
+            font-size: 32px;
+            font-family: Lato;
+        }
+        .longcontainer__slide_center .content__txt_txt-2:first-line,
+        .longcontainer__slide_center .content__txt_txt-3:first-line{
+            font-size: 18px;
+            font-family: GothamProLig;
+        }
+        /*конец стилей для иконок*/
+        /*Стрелки*/
+        .longcontainer__slide_center .content__arrow_right,
+        .longcontainer__slide_center .content__arrow_left{
+            right: 286px;
+            top: 380px;
+            width: 56px;
+        }
+        .longcontainer__slide_center .content__arrow_right{
+            left: 286px;
+        }
+        .longcontainer__slide_center .content__arrow_up,
+        .longcontainer__slide_center .content__arrow_down{
+            position: absolute;
+            width: 6px;
+            height: 40px;
+        }
+        .longcontainer__slide_center .content .content__arrow_down{
+            top: 287px;
+        }
+        .longcontainer__slide_center .content .content__arrow_up{
+            transform: rotate(180deg);
+            bottom: 274px;
+        }
+        .longcontainer__slide_center .content__arrow_up-1,
+        .longcontainer__slide_center .content__arrow_down-3{
+            left: 368px;
+        }
+        .longcontainer__slide_center .content__arrow_up-2,
+        .longcontainer__slide_center .content__arrow_down-2{
+            left: 510px;
+        }
+        .longcontainer__slide_center .content__arrow_down-1,
+        .longcontainer__slide_center .content__arrow_up-3{
+            right: 368px;
+        }
+         /*конец стилей для стрелок*/
+ /*конец стилей для второй страницы карусели*/
+ 
+ /*Стили для третьей страницы карусели*/
+ .longcontainer__slide_right{
+    
+}
+.slideRight__ice{
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+}
+.slideRight__ice_elem-1{
+    height: 94px;
+    right: -14px;
+    top: 200px;
+}
+.slideRight__ice_elem-2{
+    height: 40px;
+    left: 0px;
+    top: 90px;
+}
+.slideRight__ice_elem-3{
+    height: 180px;
+    left: 160px;
+    bottom: -20px;
+    opacity: 0.3;
+    transform: rotate(-27deg);
+}
+
+    /*Икноки третьей страницы карусели*/
+    .longcontainer__slide_right .content__icon_1{
+        width: 76px;
+        height: 76px;
+        top:220px;
+        left: calc(50% - 38px);
+        line-height: 1.1;
+    }
+    .longcontainer__slide_right .content__icon_4{
+        top: 570px;
+        right: 260px;
+        background-image: url(../img/BG_3/lipid.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+    .longcontainer__slide_right .content__icon_5{
+        top: 495px;
+        right: 260px;
+        background-image: url(../img/BG_3/muscle.png);
+        background-size: 86%;
+        background-position: 4px 10px;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+    .longcontainer__slide_right .content__icon_6{
+        top: 420px;
+        right: 260px;
+        background-image: url(../img/BG_3/liver.png);
+        background-size: 80%;
+        background-position: 4px 10px;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+    .longcontainer__slide_right .content__icon_7{
+        top: 260px;
+        right: 260px;
+        background-image: url(../img/BG_3/brain.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .longcontainer__slide_right .content__icon_8{
+        top: 260px;
+        left: 260px;
+        background-image: url(../img/BG_3/intestines.png);
+        background-size: 70%;
+        background-position: 5px 1px;
+        background-repeat: no-repeat;
+    }
+    .longcontainer__slide_right .content__icon_9{
+        top: 350px;
+        left: 260px;
+        background-image: url(../img/BG_3/infection.png);
+        background-size: 83%;
+        background-position: 4px 6px;
+        background-repeat: no-repeat;
+    }
+    .longcontainer__slide_right .content__icon_10{
+        top: 496px;
+        left: 260px;
+        background-image: url(../img/BG_3/stomach.png);
+        background-size: 70%;
+        background-position: 6px 8px;
+        background-repeat: no-repeat;
+    }
+    .longcontainer__slide_right .content__icon_11{
+        top: 570px;
+        left: calc(50% - 28px);
+        background-image: url(../img/BG_3/reins.png);
+        background-size: 70%;
+        background-position: 5px 4px;
+        background-repeat: no-repeat;
+    }
+    /*конец стрелок третьей стрыницы карусели*/
+
+    /*Текст рядом с иконоками*/
+    .longcontainer__slide_right .content__txt{
+        font-family: Lato;
+        z-index: 5;
+    }
+    .content__txt_medium{
+        font-size: 22px;
+    }
+    .content__txt_small-medium{
+        font-size: 18px;
+    }
+    .content__txt_small{
+        font-size: 14px;
+    }
+    .content__txt_text-1{
+        display: flex;
+        align-items: center;
+        width: auto;
+        font-size: 32px;
+        top: 150px;
+        left: calc(50% - 75px);
+    }
+    .content__txt_text-1 p{
+        float: right;
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+    .content__txt_small-medium::first-line{
+        font-size: 32px;  
+    }
+    .content__txt_text-2{
+        text-align: right;
+        top: 360px;
+        left: 300px;
+    }
+    .content__txt_text-3{
+        text-align: left;
+        top: 360px;
+        right: 300px;
+    }
+    .content__txt_text-4{
+        text-align: center;
+        top: 506px;
+        right: calc(50% - 100px);
+    }
+    .content__txt_text-5{
+        top: 430px;
+        left: 184px;
+    }
+    .content__txt_text-6{
+        top: 448px;
+        left: 458px;
+    }
+    .content__txt_text-7{
+        text-align: left;
+        top: 564px;
+        right: 46px;    
+    }
+    .content__txt_text-8{
+        text-align: left;
+        top: 490px;
+        right: 46px;   
+    }
+    .content__txt_text-9{
+        text-align: left;
+        top: 414px;
+        right: 46px;    
+    }
+    .content__txt_text-10{
+        top: 256px;
+        right: 46px;
+        text-align: left;
+    }
+    .content__txt_text-11{
+        top: 250px;
+        left: 50px;
+        text-align: right;
+    }
+    .content__txt_text-12{
+        top: 340px;
+        left: 50px;
+        text-align: right;
+    }
+    .content__txt_text-13{
+        top: 496px;
+        left: 50px;
+        text-align: right;
+    }
+    .content__txt_text-14{
+        top: 570px;
+        right: 550px;
+        text-align: right;
+    }
+    /*конец текста иконок третьей стрыницы карусели*/
+
+    /*Стрелки*/
+    .longcontainer__slide_right .content__arrow{
+        color: #fff;
+        position: absolute;
+    }
+    .longcontainer__slide_right .content__arrow_down-1{
+        width: 146px;
+        height: 124px;
+        top: 344px;
+        left: calc(50% - 72px);
+        transform: rotate(-49deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-2,
+    .longcontainer__slide_right .content__arrow_down-3,
+    .longcontainer__slide_right .content__arrow_down-4{
+        height: 50px;
+        width: 7px;
+    }
+    .longcontainer__slide_right .content__arrow_down-2{
+        top: 308px;
+        left: calc(50% - 20px);
+    }
+    .longcontainer__slide_right .content__arrow_down-3{
+        top: 308px;
+        right: calc(50% - 20px);
+    }
+    .longcontainer__slide_right .content__arrow_down-4{
+        top: 450px;
+        left: calc(50% - 20px);
+    }
+    .longcontainer__slide_right .content__arrow_down-5{
+        top: 471px;
+        right: calc(50% - 20px);
+        width: 5px;
+        height: 30px;
+        transform: rotate(180deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-6{
+        top: 426px;
+        right: calc(50% - 20px);
+        width: 4px;
+        height: 20px;
+        transform: rotate(180deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-7{
+        top: 536px;
+        right: calc(50% + 12px);
+        width: 5px;
+        height: 30px;
+    }
+    .longcontainer__slide_right .content__arrow_down-8{
+        top: 536px;
+        right: calc(50% - 12px);
+        width: 5px;
+        height: 30px;
+        transform: rotate(180deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-9{
+        top: 454px;
+        left: 286px;
+        width: 6px;
+        height: 34px;
+        transform: rotate(180deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-10{
+        width: 100px;
+        height: 6px;
+        top: 480px;
+        left: 320px;
+        transform: rotate(20deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-11{
+        width: 70px;
+        top: 518px;
+        left: 340px;
+        transform: rotate(180deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-12{
+        width: 6px;
+        height: 100px;
+        top: 210px;
+        left: 390px;
+        transform: rotate(260deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-13{
+        width: 6px;
+        height: 100px;
+        top: 222px;
+        left: 390px;
+        transform: rotate(80deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-14{
+        width: 160px;
+        height: 120px;
+        top: 300px;
+        left: 320px;
+    }
+    .longcontainer__slide_right .content__arrow_down-15{
+        width: auto;
+        height: 100px;
+        top: 266px;
+        left: 336px;
+        transform: rotate(190deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-16{
+        width: auto;
+        height: 100px;
+        top: 280px;
+        left: 340px;
+        transform: rotate(10deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-17{
+        width: 6px;
+        height: 100px;
+        top: 210px;
+        right: 390px;
+        transform: rotate(-260deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-18{
+        width: 6px;
+        height: 100px;
+        top: 222px;
+        right: 390px;
+        transform: rotate(-80deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-19{
+        width: auto;
+        height: 100px;
+        top: 266px;
+        right: 336px;
+        transform: rotate(-290deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-20{
+        width: auto;
+        height: 100px;
+        top: 280px;
+        right: 340px;
+        transform: rotate(-110deg);
+    }
+    .longcontainer__slide_right .content__arrow_down-21{
+        top: 330px;
+        right: 212px;
+        width: 5px;
+        height: 30px;
+    }
+    .longcontainer__slide_right .content__arrow_down-22{
+        top: 330px;
+        right: 232px;
+        width: 5px;
+        height: 30px;
+        transform: rotate(180deg);
+    }
+    /*конец стрелок третьей стрыницы карусели*/
+
+    /*Блок для группировки*/
+    .content__box{
+        height: 300px;
+        width: 250px;
+        background: linear-gradient(170deg, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.07) 25%, rgba(255,255,255,0) 70%);
+        border-radius: 20%;
+        position: absolute;
+        top: 370px;
+        right: 80px;
+        text-align: center;
+    }
+    .content__box .nameBox{
+        font-size: 14px;
+        font-family: GothamProLig;
+        color: rgb(255, 255, 255);
+        line-height: 2;
+    }
+    /*конец блок для группировки*/
+
+    /*Слайдер для третьей страницы*/
+    .slider{
+        width: 550px;
+        height: 100px;
+        position: absolute;
+        bottom: 10px;
+        left: calc(50% - 275px);
+        z-index: 88;
+    }
+    .slider .elems,
+    .slider .years{
+        width: 500px;
+        height: 50px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .elems__linear{
+        width: 100%;
+        height: 14px;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: calc(50% - 7px);
+        left: 0;
+        right: 0;
+        z-index: 89;
+    }
+    .elems__linear_color{
+        width: 50%;
+        background: #d1eaff;
+        z-index: 90;
+    }
+    .elems__polygon{
+        width: 50px;
+        height: 64px;
+        background: url(../img/BG_3/toggel/Polygon.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: calc(50% - 32px);
+        left: calc(50% - 25px);
+        z-index: 99;
+    }
+    .slider .years{
+        width: 550px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .slider .years p{
+        color: #fff;
+        font-size: 22px;
+        font-family: GothamProLig;
+        text-align: center;
+        margin: 0;
+    }
+    
+    /*конец слайдера для третьей страницы*/
+  
+  /*конец стилей для третьей страницы карусели*/
+
